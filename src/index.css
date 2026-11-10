@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', 'Noto Sans Sinhala', system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Noto Sans Sinhala', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Noto Sans Sinhala', monospace;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Warm oak checkerboard texture matching AP LAB modal frames */
+.wood-panel {
+  background-color: #362214;
+  background-image:
+    linear-gradient(45deg, rgba(255, 210, 145, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 210, 145, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 210, 145, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 210, 145, 0.03) 75%);
+  background-size: 28px 28px;
+  background-position: 0 0, 0 14px, 14px -14px, -14px 0;
+  border: 2px solid #A8733B;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 224, 175, 0.25),
+    0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.teal-guide-panel {
+  background-color: #0D2E36;
+  background-image: linear-gradient(180deg, rgba(21, 70, 82, 0.55) 0%, rgba(10, 35, 42, 0.96) 100%);
+  border: 2px solid #287482;
+  box-shadow:
+    inset 0 1px 0 rgba(135, 225, 240, 0.16),
+    0 18px 40px rgba(0, 0, 0, 0.52);
+}
+
+.parchment-panel {
+  background-color: #F4EFE3;
+  background-image:
+    linear-gradient(rgba(160, 130, 88, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(160, 130, 88, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  border: 3px solid #B58246;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+.amber-cta {
+  background: linear-gradient(180deg, #FFA438 0%, #EE7C17 100%);
+  border: 1px solid #FFC978;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 4px 12px rgba(238, 124, 23, 0.35);
+}
+
+.amber-cta:hover {
+  background: linear-gradient(180deg, #FFB24E 0%, #F58620 100%);
+}
+
+/* Custom subtle scrollbars inside panels */
+.lab-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.lab-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+}
+.lab-scroll::-webkit-scrollbar-thumb {
+  background: rgba(243, 181, 102, 0.35);
+  border-radius: 999px;
+}
+.lab-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 181, 102, 0.55);
+}
+
+/* Range slider styling for laboratory dials */
+input[type="range"].lab-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  outline: none;
+}
+input[type="range"].lab-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #F59E0B;
+  border: 2px solid #FFF7ED;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+input[type="range"].lab-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #F59E0B;
+  border: 2px solid #FFF7ED;
+  cursor: pointer;
+}

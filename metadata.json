@@ -1,0 +1,8 @@
+{
+  "name": "Remix ChemLab LK — A/L Chemistry Unit 1 Virtual 3D Lab",
+  "description": "Interactive 3D virtual chemistry laboratory for Sri Lankan G.C.E. A/L Unit 1 Atomic Structure practicals: Cathode Ray Tube, Thomson e/m \u0026 Canal Rays, Millikan Oil Drop, and Rutherford Gold Foil experiments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
